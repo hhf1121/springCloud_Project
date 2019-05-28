@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.hhf</groupId>
+    <artifactId>springCloudProject_service</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>springCloudProject_user_service</artifactId>
+  <dependencies>
+  		<dependency>
+		    <groupId>com.hhf</groupId>
+		    <artifactId>springCloudProject_api_user</artifactId>
+		    <version>0.0.1-SNAPSHOT</version>
+	  	</dependency>
+	    <dependency>
+  	 	  <groupId>com.hhf</groupId>
+     	  <artifactId>springCloudProject_api_vip</artifactId>
+    	  <version>0.0.1-SNAPSHOT</version>
+    	</dependency>
+	  	<!-- mysql connection -->
+	 	<dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+		 <!-- 分页插件 -->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+            <version>1.2.5</version>
+        </dependency>
+	  	
+  </dependencies>
+</project>

@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: springCloudProject_vip_service
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: hhf
+Implementation-Vendor-Id: com.hhf
+Build-Jdk: 1.8.0
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/springCloudProject_parent/springCloudProject_servic
+ e/springCloudProject_vip_service
+Created-By: Maven Integration for Eclipse
+
