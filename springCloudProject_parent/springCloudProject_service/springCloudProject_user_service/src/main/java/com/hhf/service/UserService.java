@@ -32,4 +32,14 @@ public class UserService implements IUserService{
 		return vipFeginService.getVipStr();
 	}
 	
+	@RequestMapping("/getUserDataTimeOut")
+	public String getUserDataTimeOut(@RequestParam("times") Integer times){
+		try {
+			Thread.sleep(times);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		return "vip调用user：time："+times;
+	}
+	
 }
