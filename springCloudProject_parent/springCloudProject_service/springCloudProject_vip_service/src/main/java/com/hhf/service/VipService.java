@@ -26,5 +26,10 @@ public class VipService implements IVipService{
 	public List<User> getUserByFegin(Integer type) {
 		return userFegin.getUserDataByType(type);
 	}
+	
+	@RequestMapping("/getUserByTime")
+	public String getUserDataTimeOut(Integer times) {
+		return userFegin.getUserDataTimeOut(times);
+	}
 
 }
