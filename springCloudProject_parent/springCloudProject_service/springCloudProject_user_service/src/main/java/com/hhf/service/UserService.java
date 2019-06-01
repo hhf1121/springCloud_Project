@@ -39,7 +39,25 @@ public class UserService implements IUserService{
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		return "vip调用user：time："+times;
+		return "vip调用user-getUserDataTimeOut：time："+times;
 	}
+
+	@RequestMapping("/getUserStr")
+	public String getUserStr() {
+		return "user：getUserStr被调用。。。";
+	}
+
+	@Override
+	public String getUserTimeOut(Integer times) {
+		try {
+			Thread.sleep(times);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		return "vip调用user-getUserTimeOut：time："+times;
+	}
+	
+	
+	
 	
 }

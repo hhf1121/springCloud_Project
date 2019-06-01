@@ -12,6 +12,7 @@ public interface IUserService {
 
 	@RequestMapping("/getUserDataByType")
 	public List<User> getUserDataByType(@RequestParam("type") Integer type);
+	
 	/**
 	 * 自定义时间，达到超时效果
 	 * @param times
@@ -19,5 +20,17 @@ public interface IUserService {
 	 */
 	@RequestMapping("/getUserDataTimeOut")
 	public String getUserDataTimeOut(@RequestParam("times") Integer times);
+	
+	/**
+	 * 自定义时间，达到超时效果
+	 * @param times
+	 * @return
+	 */
+	@RequestMapping("/getUserTimeOut")
+	public String getUserTimeOut(@RequestParam("times") Integer times);
+	
+	
+	@RequestMapping("/getUserStr")
+	public String getUserStr();
 	
 }

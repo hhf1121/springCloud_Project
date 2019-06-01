@@ -16,9 +16,7 @@ eureka:
     service-url:
     ##集群下，配置多个地址
            defaultZone: http://127.0.0.1:8100/eureka
-           #,http://localhost:8200/eureka,http://localhost:8300/eureka
-
-           
+           #,http://localhost:8200/eureka,http://localhost:8300/eureka        
 ###因为该应用为注册中心，不会注册自己
     register-with-eureka: true
 ###是否需要从eureka上获取注册信息
