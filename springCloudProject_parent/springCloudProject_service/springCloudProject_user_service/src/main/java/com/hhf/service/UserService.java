@@ -3,6 +3,7 @@ package com.hhf.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,6 +15,9 @@ import com.hhf.mapper.UserMapper;
 
 @RestController
 public class UserService implements IUserService{
+	
+	@Value("${server.port}")
+	private String port;
 	
 	@Autowired
 	private VipFeginService vipFeginService;
@@ -44,7 +48,7 @@ public class UserService implements IUserService{
 
 	@RequestMapping("/getUserStr")
 	public String getUserStr() {
-		return "user：getUserStr被调用。。。";
+		return "user：getUserStr被调用。。。"+port;
 	}
 
 	@Override
