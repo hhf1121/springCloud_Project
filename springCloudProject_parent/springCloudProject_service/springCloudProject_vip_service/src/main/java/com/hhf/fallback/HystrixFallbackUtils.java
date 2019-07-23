@@ -1,5 +1,6 @@
 package com.hhf.fallback;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Component;
@@ -12,8 +13,11 @@ public class HystrixFallbackUtils implements UserFeginService{
 
 	@Override
 	public List<User> getUserDataByType(Integer type) {
-		// TODO Auto-generated method stub
-		return null;
+		List<User> result=new ArrayList<User>();
+		User user=new User();
+		user.setName("hystrix:服务降级");
+		result.add(user);
+		return result;
 	}
 
 	@Override
