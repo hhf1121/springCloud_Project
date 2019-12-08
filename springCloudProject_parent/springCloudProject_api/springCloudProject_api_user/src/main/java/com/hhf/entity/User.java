@@ -3,6 +3,8 @@ package com.hhf.entity;
 import java.io.Serializable;
 import java.sql.Timestamp;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 /**
  * @author Administrator
@@ -15,12 +17,16 @@ public class User implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	private long id;
+	@TableField("userName")
 	private String userName;
+	@TableField("passWord")
 	private String passWord;
 	private String name;
 	private String address;
 	private int yes;//权限、默认0。
+	@TableField("createDate")
 	private Timestamp createDate;
+	@TableField("picPath")
 	private String picPath;//头像路径
 	
 	

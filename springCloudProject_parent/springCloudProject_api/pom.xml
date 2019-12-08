@@ -11,4 +11,11 @@
   	<module>springCloudProject_api_user</module>
   	<module>springCloudProject_api_vip</module>
   </modules>
+  <dependencies>
+    <dependency>
+      <groupId>com.baomidou</groupId>
+      <artifactId>mybatis-plus-boot-starter</artifactId>
+      <version>3.3.0</version>
+    </dependency>
+  </dependencies>
 </project>
