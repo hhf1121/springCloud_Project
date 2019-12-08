@@ -1,12 +1,15 @@
 package com.hhf.service;
 
 import java.util.List;
+import java.util.Map;
 
+import com.baomidou.mybatisplus.core.conditions.Wrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.google.common.collect.Maps;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.hhf.api.IUserService;
 import com.hhf.entity.User;
@@ -61,7 +64,18 @@ public class UserService implements IUserService{
 		return "vip调用user-getUserTimeOut：time："+times;
 	}
 	
-	
+	@PostMapping("/queryByMP")
+	public Map<String,Object> queryByMP(@RequestBody  User user){
+		Map<String,Object> result= Maps.newHashMap();
+		QueryWrapper<User> wrapper=new QueryWrapper<User>();
+		if(!StringUtils.isBlank(user.getName())){
+			wrapper.eq("name",user.getName());
+		}
+        wrapper.select("id","name","passWord").or().eq("name","张三").last("limit 0,1");
+		List<User> users = userMapper.selectList(wrapper);
+		result.put("data",user);
+		return result;
+	}
 	
 	
 }

@@ -23,11 +23,11 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
 		 <!-- 分页插件 -->
-        <dependency>
+        <!--<dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper-spring-boot-starter</artifactId>
             <version>1.2.5</version>
-        </dependency>
+        </dependency>-->
 	  		<!--spring-cloud 整合 config-server -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
@@ -38,5 +38,12 @@
         	<groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
+      <!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-boot-starter -->
+      <dependency>
+          <groupId>com.baomidou</groupId>
+          <artifactId>mybatis-plus-boot-starter</artifactId>
+          <version>3.3.0</version>
+      </dependency>
+
   </dependencies>
 </project>
