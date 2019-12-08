@@ -61,7 +61,6 @@
   
 	<modules>
 		<module>springCloudProject_api</module>
-		<module>sspringCloudProject_Service</module>
 		<module>springCloudProject_service</module>
 	</modules>
 </project>
